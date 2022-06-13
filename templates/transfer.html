@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer History</title>
+    <link rel="stylesheet" href="/static/productstyle.css" />
+  </head>
+  <body>
+    <ul>
+      <li
+        style="
+          float: left;
+          border-right: none;
+          border-left: none;
+          font-size: 42px;
+          color: white;
+          font-weight: bold;
+        "
+      >
+        <p style="margin-top: 5px">Transfer History</p>
+      </li>
+      <li>
+        <a class="active" href="/">Logout</a>
+      </li>
+      <li>
+        <a class="active" href="/profile">{{ session['employee_name'] }}</a>
+      </li>
+      <li>
+        <a class="active" href="/report">Report</a>
+      </li>
+      <li>
+        <a class="active" href="/location">Locations</a>
+      </li>
+      <li>
+        <a class="active" href="/product">Products</a>
+      </li>
+      <li>
+        <a class="active" href="/home">Home</a>
+      </li>
+    </ul>
+    <div class="container">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Timestamp</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>User</th>
+        </tr>
+        {% for transfer_detail in transfers["Items"] %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ transfer_detail['transfer_timestamp'] }}</td>
+          <td>{{ transfer_detail['transfer_from'] }}</td>
+          <td>{{ transfer_detail['transfer_to'] }}</td>
+          <td>{{ transfer_detail['transfer_product'] }}</td>
+          <td>{{ transfer_detail['transfer_quantity'] }}</td>
+          <td>{{ transfer_detail['transfer_user'] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

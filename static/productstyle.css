@@ -1,0 +1,234 @@
+body,
+html {
+  font-family: "helvetica", sans-serif;
+  background-color: #03a9f4;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 90px;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+}
+
+input[type="text"] {
+  width: 22%;
+  margin: 8px 0;
+  padding: 8px 20px;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: black;
+  outline: none;
+}
+
+.container {
+  padding: 25px;
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  border-left-width: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+
+.container table {
+  width: 100%;
+  color: rgb(131, 129, 129);
+  border-collapse: collapse;
+}
+
+.container td {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.container th {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#addLocation {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  width: 15%;
+  display: inline-block;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 0px;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+}
+
+.container a {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  width: 15%;
+  display: inline-block;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 660px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+}
+
+#add-stock {
+  background-color: #03f42b;
+  text-align: center;
+  font-size: large;
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  width: 50%;
+  padding: 4px;
+  display: inline-block;
+  border: 2px solid #03f42b;
+  box-sizing: border-box;
+  margin-left: -5px;
+}
+
+#delete-stock {
+  background-color: #f01616;
+  text-align: center;
+  font-size: large;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  width: 50%;
+  display: inline-block;
+  border: 1px solid #f01616;
+  box-sizing: border-box;
+  margin-left: -5px;
+}
+
+#transfer-product {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  width: 20%;
+  display: inline-block;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+}
+
+#filter-product {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  width: 10%;
+  display: inline-block;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+}
+
+#view-product {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  width: 50%;
+  display: inline-block;
+  border: 1px solid #03a9f4;
+  box-sizing: border-box;
+  margin-left: -5px;
+}
+
+#edit-location {
+  background-color: #03a9f4;
+  text-align: center;
+  font-size: large;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  width: 50%;
+  display: inline-block;
+  border: 1px solid #03a9f4;
+  box-sizing: border-box;
+  margin-left: -5px;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: large;
+}
+
+ul {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  list-style-type: none;
+  background-color: #03a9f4;
+}
+
+li {
+  float: right;
+  border-left: 1px solid #bbb;
+}
+
+li a:hover {
+  background-color: #d0d1d4;
+}
+
+.active {
+  background-color: #03a9f4;
+}
+
+button {
+  background-color: #03a9f4;
+  width: 10%;
+  color: white;
+  font-size: large;
+  padding: 15px;
+  margin: 10px 0px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}

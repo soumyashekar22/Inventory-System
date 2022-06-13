@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul>
+      <li
+        style="
+          float: left;
+          border-right: none;
+          border-left: none;
+          font-size: 42px;
+          color: white;
+          font-weight: bold;
+        "
+      >
+        <p style="margin-top: 5px">Product Details</p>
+      </li>
+      <li>
+        <a class="active" href="/">Logout</a>
+      </li>
+      <li>
+        <a class="active" href="/profile">{{ session['employee_name'] }}</a>
+      </li>
+      <li>
+        <a class="active" href="/report">Report</a>
+      </li>
+      <li>
+        <a class="active" href="/transfer">Transfer History</a>
+      </li>
+      <li>
+        <a class="active" href="/location">Locations</a>
+      </li>
+      <li>
+        <a class="active" href="/product">Products</a>
+      </li>
+      <li>
+        <a class="active" href="/home">Home</a>
+      </li>
+    </ul>
+    <div class="container">
+      <img
+        src="/static/images.jpg"
+        alt="product image"
+        width="400"
+        height="200"
+      />
+      <p>
+        <label style="margin-right: 330px">Product Name</label>
+        <input type="text" value="{{ product_name}}" name="product_name" />
+      </p>
+      <p>
+        <label style="margin-right: 300px">Description</label>
+        <input
+          type="text"
+          value="{{ product_description }}"
+          name="product_description"
+        />
+      </p>
+      <p>
+        <label style="margin-right: 320px">Quantity</label>
+        <input type="text" value="Quantity" name="product_quantity" readonly />
+      </p>
+    </div>
+  </body>
+</html>

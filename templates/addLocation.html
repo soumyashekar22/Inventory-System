@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a class="active" href="/">Logout</a>
+      </li>
+      <li>
+        <a class="active" href="/">Name</a>
+      </li>
+      <li>
+        <a class="active" href="/report">Report</a>
+      </li>
+      <li>
+        <a class="active" href="/transfer">Transfer</a>
+      </li>
+      <li>
+        <a class="active" href="/location">Locations</a>
+      </li>
+      <li>
+        <a class="active" href="/product">Products</a>
+      </li>
+      <li>
+        <a class="active" href="/home">Home</a>
+      </li>
+    </ul>
+    <h1 style="padding-top: 60px">Add Location</h1>
+    <form action="/addNewLocation" method="post">
+      <div class="container">
+        <p>
+          <label style="margin-right: 280px">Location Name</label>
+          <input
+            type="text"
+            placeholder="Enter Location Name"
+            name="location_name"
+            required
+          />
+        </p>
+        <p>
+          <label style="margin-right: 260px">Location Address</label>
+          <input
+            type="text"
+            placeholder="Enter Location Address"
+            name="location_address"
+            required
+          />
+        </p>
+        <button type="submit">Add New Location</button>
+        <p>{{message}}</p>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul>
+      <li
+        style="
+          float: left;
+          border-right: none;
+          border-left: none;
+          font-size: 42px;
+          color: white;
+          font-weight: bold;
+        "
+      >
+        <p style="margin-top: 5px">Add Product</p>
+      </li>
+      <li>
+        <a class="active" href="/">Logout</a>
+      </li>
+      <li>
+        <a class="active" href="/">Name</a>
+      </li>
+      <li>
+        <a class="active" href="/report">Report</a>
+      </li>
+      <li>
+        <a class="active" href="/transfer">Transfer</a>
+      </li>
+      <li>
+        <a class="active" href="/location">Locations</a>
+      </li>
+      <li>
+        <a class="active" href="/product">Products</a>
+      </li>
+      <li>
+        <a class="active" href="/home">Home</a>
+      </li>
+    </ul>
+    <form action="/addNewProduct" method="post" enctype="multipart/form-data">
+      <div class="container-addproduct">
+        <img src="{{img_path}}" alt="product image" id="my_image" />
+        <input
+          id="file-input"
+          type="file"
+          name="image_uploaded"
+          onchange="uploadImage(event)"
+        />
+        <p>
+          <label>Product Name</label>
+          <input
+            type="text"
+            placeholder="Enter Product Name"
+            name="product_name"
+            required
+            autocomplete="off"
+          />
+        </p>
+        <p>
+          <label>Product Description</label>
+          <input
+            type="text"
+            placeholder="Enter Product Description"
+            name="product_description"
+            required
+            autocomplete="off"
+          />
+        </p>
+        <p>
+          <label>Product Category</label>
+          <input
+            type="text"
+            placeholder="Choose Product Category"
+            name="product_category"
+            list="product_category_list"
+            required
+            autocomplete="off"
+          />
+        </p>
+        <button type="submit">Add New Product</button>
+        <p>{{message}}</p>
+      </div>
+    </form>
+    <datalist id="product_category_list">
+      <option value="Stationary"></option>
+      <option value="Medical"></option>
+      <option value="Grocery"></option>
+      <option value="Logistics"></option>
+      <option value="Other"></option>
+    </datalist>
+    <script>
+      var uploadImage = function (event) {
+        var img = document.getElementById("my_image");
+        var url = URL.createObjectURL(event.target.files[0]);
+        img.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+  </body>
+</html>

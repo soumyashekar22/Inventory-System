@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/home.css" />
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a class="active" href="/">Logout</a>
+      </li>
+      <li>
+        <a class="active" href="/profile">{{ session['employee_name'] }}</a>
+      </li>
+      <li>
+        <a class="active" href="/report">Report</a>
+      </li>
+      <li>
+        <a class="active" href="/transfer">Transfer History</a>
+      </li>
+      <li>
+        <a class="active" href="/location">Locations</a>
+      </li>
+      <li>
+        <a class="active" href="/product">Products</a>
+      </li>
+    </ul>
+    <h1>myStocx Dashboard</h1>
+    <div class="container1">
+      <a href="/product">Products</a>
+      <p>Lets you add, delete, update products and it's stocks</p>
+    </div>
+    <div class="container2">
+      <a href="/location">Location</a>
+      <p>Lets you add and delete locations</p>
+    </div>
+    <div class="container3">
+      <a href="/transfer">Transfer</a>
+      <p>Lets you view the history to stock transfer between warehouses</p>
+    </div>
+    <div class="container4">
+      <a href="/report">Stock Report</a>
+      <p>Displays the total quantity of the product in each location</p>
+    </div>
+  </body>
+</html>
